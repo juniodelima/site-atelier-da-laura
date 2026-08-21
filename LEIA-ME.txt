@@ -1,0 +1,33 @@
+SITE — O ATELIER DA LAURA
+=========================
+
+Conteúdo da pasta
+-----------------
+index.html    Página completa do site (abra em qualquer navegador)
+support.js    Arquivo de apoio necessário para a página funcionar
+brand/        Logotipo, fundo aquarela, ornamentos e as obras
+midia/        Vídeo do atelier e fotos da Laura
+
+Como visualizar
+---------------
+Abra o arquivo index.html com um duplo clique. Mantenha todos os
+arquivos e pastas juntos — se algum for movido, as imagens e o
+vídeo deixam de aparecer.
+
+Como publicar
+-------------
+Envie o conteúdo desta pasta (index.html, support.js, brand/ e midia/)
+para a raiz do seu servidor ou serviço de hospedagem. Nenhuma
+instalação é necessária. As fontes são carregadas do Google Fonts,
+portanto é preciso conexão com a internet.
+
+Dados publicados na página
+--------------------------
+WhatsApp    (61) 98174-6048
+E-mail      oatelierdalaura@gmail.com
+Instagram   @oatelierdalaura
+Telas       30x20 cm — R$ 1.100  |  40x30 cm — R$ 1.300
+
+O formulário de contato é uma demonstração visual: ele exibe a
+mensagem de confirmação, mas ainda não envia os dados. Para receber
+os pedidos por e-mail é preciso conectá-lo a um serviço de formulários.
