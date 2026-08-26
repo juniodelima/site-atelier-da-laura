@@ -41,8 +41,9 @@ As imagens do site são as .webp. Os .png e .jpg originais continuam
 nas pastas como backup e não são usados pela página: podem ser
 apagados sem quebrar nada.
 
-Antes de publicar em domínio próprio
-------------------------------------
-Trocar https://oatelierdalaura.com.br pelo endereço definitivo em:
+Endereço do site
+----------------
+O site está publicado em https://atelier-da-laura.vercel.app
+Se um dia passar para domínio próprio, trocar esse endereço em:
 index.html (canonical, og:url, og:image, schema), sitemap.xml,
 robots.txt e llms.txt.

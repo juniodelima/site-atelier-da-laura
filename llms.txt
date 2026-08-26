@@ -6,12 +6,12 @@ O atelier é conduzido por Laura, artista formada em arquitetura e urbanismo, à
 
 ## Seções do site
 
-- [Início](https://oatelierdalaura.com.br/): apresentação da pintura ao vivo para casamentos
-- [A Experiência](https://oatelierdalaura.com.br/#experiencia): como a obra nasce durante a celebração
-- [Processo](https://oatelierdalaura.com.br/#processo): os quatro momentos entre o primeiro contato e a entrega da tela
-- [Obras](https://oatelierdalaura.com.br/#obras): acervo de telas pintadas em casamentos, murais e arte corporativa
-- [Quem é Laura](https://oatelierdalaura.com.br/#laura): formação, trajetória e os mais de 14 anos de atelier
-- [Perguntas frequentes](https://oatelierdalaura.com.br/#perguntas): duração, entrega, área de atendimento e valores
+- [Início](https://atelier-da-laura.vercel.app/): apresentação da pintura ao vivo para casamentos
+- [A Experiência](https://atelier-da-laura.vercel.app/#experiencia): como a obra nasce durante a celebração
+- [Processo](https://atelier-da-laura.vercel.app/#processo): os quatro momentos entre o primeiro contato e a entrega da tela
+- [Obras](https://atelier-da-laura.vercel.app/#obras): acervo de telas pintadas em casamentos, murais e arte corporativa
+- [Quem é Laura](https://atelier-da-laura.vercel.app/#laura): formação, trajetória e os mais de 14 anos de atelier
+- [Perguntas frequentes](https://atelier-da-laura.vercel.app/#perguntas): duração, entrega, área de atendimento e valores
 
 ## Contato
 

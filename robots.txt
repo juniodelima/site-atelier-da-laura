@@ -21,4 +21,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://oatelierdalaura.com.br/sitemap.xml
+Sitemap: https://atelier-da-laura.vercel.app/sitemap.xml
