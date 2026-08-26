@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://oatelierdalaura.com.br/</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oatelierdalaura.com.br/brand/obra-08.webp</image:loc>
+      <image:title>Pintura ao vivo de casamento sobre cavalete</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oatelierdalaura.com.br/brand/obra-09.webp</image:loc>
+      <image:title>Obra do primeiro beijo dos noivos ao pôr do sol</image:title>
+    </image:image>
+  </url>
+</urlset>

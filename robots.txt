@@ -1,0 +1,24 @@
+# O Atelier da Laura — robots.txt
+User-agent: *
+Allow: /
+
+# Robôs de IA: liberados de propósito, para o atelier poder ser citado nas respostas
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://oatelierdalaura.com.br/sitemap.xml

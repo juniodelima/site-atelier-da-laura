@@ -5,7 +5,11 @@ Conteúdo da pasta
 -----------------
 index.html    Página completa do site (abra em qualquer navegador)
 support.js    Arquivo de apoio necessário para a página funcionar
-brand/        Logotipo, fundo aquarela, ornamentos e as obras
+robots.txt    Libera os robôs de busca e os de IA
+sitemap.xml   Mapa do site para o Google
+llms.txt      Resumo do atelier para as IAs (ChatGPT, Claude, Perplexity)
+llms-full.txt Conteúdo completo do site em texto puro, para as IAs
+brand/        Logotipo, fundo aquarela, ornamentos e as obras (WebP)
 midia/        Vídeo do atelier e fotos da Laura
 
 Como visualizar
@@ -30,3 +34,15 @@ Instagram   @oatelierdalaura
 A página não exibe preços nem formulário de contato: todo o contato
 acontece pelo WhatsApp, pelo e-mail e pelo Instagram. Os valores das
 telas são passados pela Laura na conversa, junto com a proposta.
+
+Imagens
+-------
+As imagens do site são as .webp. Os .png e .jpg originais continuam
+nas pastas como backup e não são usados pela página: podem ser
+apagados sem quebrar nada.
+
+Antes de publicar em domínio próprio
+------------------------------------
+Trocar https://oatelierdalaura.com.br pelo endereço definitivo em:
+index.html (canonical, og:url, og:image, schema), sitemap.xml,
+robots.txt e llms.txt.
