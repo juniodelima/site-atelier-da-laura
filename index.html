@@ -2,23 +2,23 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script src="./support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<title>O Atelier da Laura — Pintura ao Vivo para Casamentos em Brasília | Live Wedding Painting</title>
+<title>Pintura ao Vivo para Casamentos em Brasília | O Atelier da Laura</title>
 <meta name="description" content="Há mais de 14 anos transformando celebrações em obras de arte. Pintura ao vivo para casamentos em Brasília, murais artísticos e arte corporativa. Atendimento nacional." />
 <meta name="keywords" content="pintura ao vivo casamento Brasília, live wedding painting Brasil, pintura artística para casamento, artista para casamento, pintura personalizada casamento, live painter Brasil, fine art wedding painting, wedding painter Brazil, live wedding artist Brasília, murais artísticos Brasília" />
 <link rel="canonical" href="https://oatelierdalaura.com.br/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="pt_BR" />
-<meta property="og:title" content="O Atelier da Laura — Live Wedding Painting" />
+<meta property="og:title" content="O Atelier da Laura | Live Wedding Painting" />
 <meta property="og:description" content="Não entregamos somente uma pintura, mas uma experiência única." />
 <meta property="og:image" content="brand/obra-08.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="O Atelier da Laura — Live Wedding Painting" />
+<meta name="twitter:title" content="O Atelier da Laura | Live Wedding Painting" />
 <meta name="twitter:description" content="Uma memória em forma de arte, pintada durante a sua celebração." />
 <meta name="twitter:image" content="brand/obra-08.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,16 +39,76 @@
   @keyframes laDrop { from { transform: scaleY(0); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }
   @keyframes laFloat { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(1.2deg); } }
   @keyframes laMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ================= Responsivo ================= */
+  html, body { max-width: 100%; }
+  body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; touch-action: manipulation; overscroll-behavior-x: none; }
+  img, video { max-width: 100%; }
+  .la-page { width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; }
+  .la-hero-inner > div { width: 100%; }
+
+  /* ---- Tablet e celular: coluna única, centralizada ---- */
+  @media (max-width: 900px) {
+    .la-page { overflow-x: hidden; }
+    .la-header { padding: 14px 16px !important; gap: 12px !important; }
+    .la-brand { font-size: 11px !important; letter-spacing: .2em !important; }
+    .la-hero-inner { padding: 100px 20px 92px !important; }
+
+    .la-grid { justify-items: center !important; }
+    .la-grid > * { width: 100%; max-width: 560px; }
+    .la-grid h2, .la-grid h3, .la-grid p, .la-head h2, .la-head p { max-width: 100% !important; }
+    .la-grid h2, .la-head h2, .la-head > div, .la-head > p { text-align: center !important; }
+    .la-head { justify-content: center !important; }
+    .la-eyebrow { justify-content: center !important; }
+
+    .la-inset { position: static !important; right: auto !important; bottom: auto !important;
+                display: block !important; width: 60% !important; margin: 16px auto 0 !important; }
+    figcaption { text-align: center; }
+    .la-deco { opacity: .3 !important; width: min(50vw, 230px) !important; }
+    .la-stagger { margin-top: 0 !important; }
+    .la-stats { justify-content: center !important; text-align: center !important; gap: 26px 42px !important; }
+    .la-quote { padding: 0 24px !important; align-items: center !important; text-align: center !important; }
+    #topo h1 { font-size: clamp(33px, 8.6vw, 62px) !important; }
+    .la-quote p { max-width: 100% !important; }
+  }
+
+  /* ---- Galeria: duas colunas no tablet ---- */
+  @media (min-width: 641px) and (max-width: 900px) {
+    .la-gallery { grid-template-columns: 1fr 1fr !important; }
+  }
+
+  /* ---- Celular ---- */
+  @media (max-width: 640px) {
+    .la-gallery { grid-template-columns: 1fr !important; }
+    .la-gallery > figure { max-width: 480px; width: 100%; margin-left: auto; margin-right: auto; }
+    .la-pill { padding: 11px 16px !important; font-size: 9px !important; letter-spacing: .2em !important; }
+    .la-inset { width: 66% !important; }
+    figcaption[style] { padding-left: 0 !important; }
+  }
+
+  /* ---- Telas muito estreitas (iPhone SE / 13 mini) ---- */
+  @media (max-width: 380px) {
+    .la-brand { font-size: 10px !important; letter-spacing: .16em !important; }
+    .la-header { padding: 12px 14px !important; }
+    .la-hero-inner { padding: 92px 16px 88px !important; }
+    #topo h1 { font-size: 30px !important; }
+    .la-pill { padding: 10px 13px !important; }
+  }
+
+  /* ---- Paisagem em celular: hero não estica ---- */
+  @media (max-width: 900px) and (orientation: landscape) {
+    #topo { min-height: 520px !important; }
+  }
 </style>
 </helmet>
 
-<div style="overflow-x: hidden; background: #FAF8F4; position: relative;">
+<div class="la-page" style="overflow-x: hidden; background: #FAF8F4; position: relative;">
 
-  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px clamp(18px, 4vw, 56px);">
+  <header class="la-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px clamp(18px, 4vw, 56px);">
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(35,33,30,.42), rgba(35,33,30,0)); pointer-events: none;"></div>
     <a href="#topo" aria-label="O Atelier da Laura" style="position: relative; display: flex; align-items: center; gap: 14px;">
       <img src="brand/logo-grande.png" alt="Logotipo O Atelier da Laura" width="46" height="46" style="display: block; width: 46px; height: 46px; object-fit: contain; filter: brightness(1.25);" />
-      <span style="font-family: 'Italiana', 'Cormorant Garamond', serif; font-size: clamp(12px, 2.2vw, 15px); letter-spacing: .38em; text-transform: uppercase; color: #FAF8F4;">O Atelier da Laura</span>
+      <span class="la-brand" style="font-family: 'Italiana', 'Cormorant Garamond', serif; font-size: clamp(12px, 2.2vw, 15px); letter-spacing: .38em; text-transform: uppercase; color: #FAF8F4;">O Atelier da Laura</span>
     </a>
     <sc-if value="{{ compacto }}" hint-placeholder-val="{{ false }}">
       <button type="button" onClick="{{ toggleMenu }}" aria-label="Abrir menu" style="position: relative; background: transparent; border: 0; padding: 6px 0; color: #FAF8F4; font-family: 'Manrope', sans-serif; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; font-weight: 300; cursor: pointer; display: flex; align-items: center; gap: 9px;">
@@ -68,7 +128,7 @@
 
   <sc-if value="{{ menuAberto }}" hint-placeholder-val="{{ false }}">
     <nav aria-label="Navegação" style="position: fixed; inset: 0; z-index: 60; background: #FAF8F4; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 clamp(24px, 8vw, 64px); animation: laFade .5s ease both;">
-      <img src="brand/deco-c.png" alt="" aria-hidden="true" style="position: absolute; right: -40px; bottom: -30px; width: 46vw; max-width: 320px; opacity: .5; pointer-events: none;" />
+      <img class="la-deco" src="brand/deco-c.png" alt="" aria-hidden="true" style="position: absolute; right: -40px; bottom: -30px; width: 46vw; max-width: 320px; opacity: .5; pointer-events: none;" />
       <button type="button" onClick="{{ toggleMenu }}" aria-label="Fechar menu" style="position: absolute; top: 24px; right: clamp(20px, 5vw, 56px); background: transparent; border: 0; color: #23211E; font-family: 'Manrope', sans-serif; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; font-weight: 300; cursor: pointer;">Fechar</button>
       <img src="brand/logo-grande.png" alt="" aria-hidden="true" style="width: 54px; height: 54px; object-fit: contain; margin-bottom: 26px;" />
       <a href="#experiencia" onClick="{{ toggleMenu }}" style="position: relative; padding: 13px 0; border-bottom: 1px solid #EDE3D4; font-family: 'Cormorant Garamond', serif; font-size: 29px; font-weight: 300;">A Experiência</a>
@@ -84,12 +144,12 @@
       <source src="midia/atelier.mp4" type="video/mp4" />
     </video>
     <div style="position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 40%, rgba(35,33,30,.12) 0%, rgba(35,33,30,.62) 78%), linear-gradient(180deg, rgba(35,33,30,.45), rgba(35,33,30,.2) 40%, rgba(35,33,30,.78));"></div>
-    <div style="position: absolute; inset: 0; display: grid; place-items: center; padding: 92px clamp(20px, 6vw, 64px) 120px; text-align: center;">
+    <div class="la-hero-inner" style="position: absolute; inset: 0; display: grid; place-items: center; padding: 92px clamp(20px, 6vw, 64px) 120px; text-align: center;">
       <div style="max-width: 1000px;">
         <p style="margin: 0 0 26px; font-size: 9.5px; letter-spacing: .46em; text-transform: uppercase; color: rgba(201,167,106,.95); font-weight: 400; animation: laFade 1.4s ease .2s both;">Live Wedding Painting · Brasília · desde 2011</p>
         <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(40px, 7.4vw, 118px); line-height: .98; letter-spacing: -.015em; color: #FAF8F4; text-wrap: balance; animation: laFade 1.7s ease .4s both;">Nem toda lembrança<br /><em style="font-style: italic; color: #E4CFA6;">cabe</em> em uma fotografia.</h1>
         <div style="width: min(420px, 70%); height: 1px; background: linear-gradient(90deg, rgba(201,167,106,0), rgba(201,167,106,.9), rgba(201,167,106,0)); margin: clamp(28px, 4vh, 44px) auto; transform-origin: center; animation: laRule 1.8s ease .9s both;"></div>
-        <p style="margin: 0 auto; max-width: 46ch; font-size: clamp(13px, 1.4vw, 16px); line-height: 1.9; font-weight: 200; color: rgba(250,248,244,.76); animation: laFade 1.6s ease 1s both;">Sua cerimônia pintada à mão, ao vivo, diante dos seus convidados — e pendurada na sua parede antes do fim da noite.</p>
+        <p style="margin: 0 auto; max-width: 46ch; font-size: clamp(13px, 1.4vw, 16px); line-height: 1.9; font-weight: 200; color: rgba(250,248,244,.76); animation: laFade 1.6s ease 1s both;">Sua cerimônia pintada à mão, ao vivo, diante dos seus convidados, e pendurada na sua parede antes do fim da noite.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 14px 26px; justify-content: center; margin-top: clamp(32px, 5vh, 54px); animation: laFade 1.6s ease 1.25s both;">
           <a href="#convite" style="padding: 18px 44px; background: linear-gradient(120deg, #C9A76A, #A88243 60%, #D8BC8A); color: #23211E; font-size: 10.5px; letter-spacing: .28em; text-transform: uppercase; font-weight: 500;" style-hover="filter: brightness(1.08);">Solicitar experiência</a>
           <a href="#processo" style="padding: 18px 10px; color: rgba(250,248,244,.85); font-size: 10.5px; letter-spacing: .28em; text-transform: uppercase; font-weight: 300; border-bottom: 1px solid rgba(250,248,244,.3);" style-hover="color: #FAF8F4; border-color: #C9A76A;">Conheça o processo</a>
@@ -106,33 +166,33 @@
 
   <section id="experiencia" style="position: relative; padding: clamp(80px, 14vh, 180px) clamp(20px, 6vw, 88px) clamp(70px, 12vh, 150px); overflow: hidden;">
     <img src="brand/fundo-aquarela.png" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .8; pointer-events: none;" />
-    <img src="brand/deco-a.png" alt="" aria-hidden="true" style="position: absolute; top: -6%; right: -8%; width: min(46vw, 520px); opacity: .55; pointer-events: none; animation: laFloat 16s ease-in-out infinite;" />
-    <div style="position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: clamp(44px, 6vw, 104px); align-items: center;">
+    <img class="la-deco" src="brand/deco-a.png" alt="" aria-hidden="true" style="position: absolute; top: -6%; right: -8%; width: min(46vw, 520px); opacity: .55; pointer-events: none; animation: laFloat 16s ease-in-out infinite;" />
+    <div class="la-grid" style="position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); gap: clamp(44px, 6vw, 104px); align-items: center;">
       <div data-reveal="">
-        <p style="margin: 0 0 24px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>A obra</p>
+        <p class="la-eyebrow" style="margin: 0 0 24px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>A obra</p>
         <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(31px, 4.2vw, 66px); line-height: 1.06; letter-spacing: -.01em; max-width: 19ch; text-wrap: balance;">A arte que permanece quando a festa <em style="font-style: italic; color: #B08D4F;">termina</em>.</h2>
         <p style="margin: clamp(28px, 4vw, 44px) 0 22px; font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">Enquanto os votos são ditos, uma tela em branco começa a receber tudo aquilo: a luz da cerimônia, o volume do vestido, as flores do altar, a curva dos braços dele ao redor dela. Camada por camada, ao vivo.</p>
-        <p style="margin: 0 0 clamp(30px, 4vw, 42px); font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">Ao fim da recepção, as flores se despedem. A obra vai para casa com vocês — assinada, seca e pronta para atravessar gerações.</p>
+        <p style="margin: 0 0 clamp(30px, 4vw, 42px); font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">Ao fim da recepção, as flores se despedem. A obra vai para casa com vocês: assinada, seca e pronta para atravessar gerações.</p>
         <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(19px, 1.8vw, 26px); line-height: 1.5; color: #7A8065; max-width: 26ch;">“Não entregamos somente uma pintura, mas uma experiência única.”</p>
       </div>
       <figure data-reveal="" style="margin: 0; position: relative;">
         <div style="position: relative; padding: clamp(10px, 1.4vw, 20px); background: #FFFFFF; box-shadow: 0 50px 90px -60px rgba(35,33,30,.55);">
           <img src="brand/obra-08.png" alt="Pintura ao vivo de casamento sobre cavalete: noivos de mãos dadas sob arco de flores brancas" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;" />
         </div>
-        <img src="brand/obra-09.png" alt="Obra finalizada mostrando o beijo dos noivos ao pôr do sol" loading="lazy" decoding="async" style="position: absolute; right: -6%; bottom: -12%; width: 46%; border: clamp(6px, .9vw, 12px) solid #FFFFFF; box-shadow: 0 36px 60px -44px rgba(35,33,30,.6); display: block;" />
+        <img class="la-inset" src="brand/obra-09.png" alt="Obra finalizada mostrando o beijo dos noivos ao pôr do sol" loading="lazy" decoding="async" style="position: absolute; right: -6%; bottom: -12%; width: 46%; border: clamp(6px, .9vw, 12px) solid #FFFFFF; box-shadow: 0 36px 60px -44px rgba(35,33,30,.6); display: block;" />
         <figcaption style="margin-top: clamp(30px, 5vw, 54px); padding-left: 2px; font-size: 10px; letter-spacing: .28em; text-transform: uppercase; color: #8b8577; font-weight: 300;">Acrílica sobre tela · moldura posterior · assinada</figcaption>
       </figure>
     </div>
   </section>
 
   <section id="processo" style="position: relative; background: #23211E; color: #FAF8F4; padding: clamp(80px, 14vh, 180px) clamp(20px, 6vw, 88px); overflow: hidden;">
-    <img src="brand/deco-b.png" alt="" aria-hidden="true" style="position: absolute; left: -60px; bottom: -40px; width: min(38vw, 380px); opacity: .18; pointer-events: none;" />
+    <img class="la-deco" src="brand/deco-b.png" alt="" aria-hidden="true" style="position: absolute; left: -60px; bottom: -40px; width: min(38vw, 380px); opacity: .18; pointer-events: none;" />
     <div style="position: relative; max-width: 1240px; margin: 0 auto;">
-      <div data-reveal="" style="display: flex; flex-wrap: wrap; gap: 22px 60px; align-items: flex-end; justify-content: space-between; margin-bottom: clamp(50px, 7vw, 96px);">
+      <div data-reveal="" class="la-head" style="display: flex; flex-wrap: wrap; gap: 22px 60px; align-items: flex-end; justify-content: space-between; margin-bottom: clamp(50px, 7vw, 96px);">
         <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 4vw, 62px); line-height: 1.04; max-width: 20ch;">Quatro momentos entre o convite e a <em style="font-style: italic; color: #C9A76A;">obra</em>.</h2>
-        <p style="margin: 0; max-width: 30ch; font-size: 14px; line-height: 1.9; font-weight: 200; color: rgba(250,248,244,.6);">Cerca de 5 horas de pintura, iniciadas na cerimônia e concluídas durante a recepção — entregues aos noivos na mesma noite.</p>
+        <p style="margin: 0; max-width: 30ch; font-size: 14px; line-height: 1.9; font-weight: 200; color: rgba(250,248,244,.6);">Cerca de 5 horas de pintura, iniciadas na cerimônia e concluídas durante a recepção, entregues aos noivos na mesma noite.</p>
       </div>
-      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: clamp(28px, 3.4vw, 56px);">
+      <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 215px), 1fr)); gap: clamp(28px, 3.4vw, 56px);">
         <li data-reveal="" style="position: relative; padding-top: 30px; border-top: 1px solid rgba(201,167,106,.36);">
           <span style="position: absolute; top: -18px; left: 0; font-family: 'Italiana', serif; font-size: clamp(38px, 4vw, 56px); line-height: 1; color: rgba(201,167,106,.22);">01</span>
           <h3 style="margin: 26px 0 14px; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400;">Primeiro contato</h3>
@@ -141,7 +201,7 @@
         <li data-reveal="" style="position: relative; padding-top: 30px; border-top: 1px solid rgba(201,167,106,.36);">
           <span style="position: absolute; top: -18px; left: 0; font-family: 'Italiana', serif; font-size: clamp(38px, 4vw, 56px); line-height: 1; color: rgba(201,167,106,.22);">02</span>
           <h3 style="margin: 26px 0 14px; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400;">Planejamento artístico</h3>
-          <p style="margin: 0; font-size: 14px; line-height: 1.9; font-weight: 200; color: rgba(250,248,244,.62);">Estudo de composição, paleta e enquadramento — alinhados à decoração e à arquitetura do lugar.</p>
+          <p style="margin: 0; font-size: 14px; line-height: 1.9; font-weight: 200; color: rgba(250,248,244,.62);">Estudo de composição, paleta e enquadramento, alinhados à decoração e à arquitetura do lugar.</p>
         </li>
         <li data-reveal="" style="position: relative; padding-top: 30px; border-top: 1px solid rgba(201,167,106,.36);">
           <span style="position: absolute; top: -18px; left: 0; font-family: 'Italiana', serif; font-size: clamp(38px, 4vw, 56px); line-height: 1; color: rgba(201,167,106,.22);">03</span>
@@ -160,26 +220,26 @@
   <section style="position: relative; height: clamp(440px, 82vh, 800px); overflow: hidden; background: #23211E;">
     <img src="brand/foto-laura-prop.png" alt="Laura pintando ao vivo durante uma cerimônia de casamento" loading="lazy" decoding="async" ref="{{ parallaxRef }}" style="position: absolute; inset: 0; width: 100%; height: 116%; object-fit: cover; object-position: 50% 42%; opacity: .9;" />
     <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(35,33,30,.78) 0%, rgba(35,33,30,.3) 55%, rgba(35,33,30,.55) 100%);"></div>
-    <blockquote style="position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; justify-content: center; gap: 26px; padding: 0 clamp(24px, 8vw, 120px);">
+    <blockquote class="la-quote" style="position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; justify-content: center; gap: 26px; padding: 0 clamp(24px, 8vw, 120px);">
       <img src="brand/logo-grande.png" alt="" aria-hidden="true" style="width: 58px; height: 58px; object-fit: contain;" />
       <p style="margin: 0; max-width: 22ch; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(27px, 3.6vw, 58px); line-height: 1.18; color: #FAF8F4;">Um casamento acontece em um único dia. A obra permanece por <em style="font-style: italic; color: #E4CFA6;">gerações</em>.</p>
     </blockquote>
   </section>
 
   <section id="obras" style="padding: clamp(80px, 14vh, 180px) clamp(20px, 5vw, 72px) clamp(60px, 10vh, 130px);">
-    <div data-reveal="" style="max-width: 1300px; margin: 0 auto clamp(46px, 6vw, 88px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 50px;">
+    <div data-reveal="" class="la-head" style="max-width: 1300px; margin: 0 auto clamp(46px, 6vw, 88px); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 50px;">
       <div>
-        <p style="margin: 0 0 22px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>Acervo</p>
+        <p class="la-eyebrow" style="margin: 0 0 22px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>Acervo</p>
         <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 4vw, 62px); line-height: 1.04; max-width: 22ch;">Telas nascidas dentro de celebrações.</h2>
       </div>
       <p style="margin: 0; max-width: 26ch; font-size: 13.5px; line-height: 1.9; font-weight: 300; color: #6c675e;">Casamentos, murais e arte corporativa. Cada peça pintada à mão, uma única vez.</p>
     </div>
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(14px, 1.8vw, 28px); align-items: start;">
+    <div class="la-gallery" style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(14px, 1.8vw, 28px); align-items: start;">
       <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative;">
         <img src="brand/obra-01.png" alt="Pintura ao vivo da cerimônia religiosa com noiva entrando na igreja, sobre cavalete" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.6s cubic-bezier(.16,1,.3,1);" style-hover="transform: scale(1.04);" />
         <figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 18px; background: linear-gradient(180deg, rgba(35,33,30,0), rgba(35,33,30,.72)); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(250,248,244,.9); font-weight: 300;">Cerimônia · Brasília, DF</figcaption>
       </figure>
-      <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative; margin-top: clamp(0px, 3vw, 54px);">
+      <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative; margin-top: clamp(0px, 3vw, 54px);" class="la-stagger">
         <img src="brand/obra-03.png" alt="Obra do altar com véu e flores brancas finalizada sobre o cavalete durante a recepção" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.6s cubic-bezier(.16,1,.3,1);" style-hover="transform: scale(1.04);" />
         <figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 18px; background: linear-gradient(180deg, rgba(35,33,30,0), rgba(35,33,30,.72)); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(250,248,244,.9); font-weight: 300;">Altar · acrílica sobre tela</figcaption>
       </figure>
@@ -187,7 +247,7 @@
         <img src="brand/obra-05.png" alt="Noiva e casal ao lado da obra pintada ao vivo no dia do casamento" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.6s cubic-bezier(.16,1,.3,1);" style-hover="transform: scale(1.04);" />
         <figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 18px; background: linear-gradient(180deg, rgba(35,33,30,0), rgba(35,33,30,.72)); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(250,248,244,.9); font-weight: 300;">Entrega aos noivos</figcaption>
       </figure>
-      <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative; margin-top: clamp(0px, 3vw, 54px);">
+      <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative; margin-top: clamp(0px, 3vw, 54px);" class="la-stagger">
         <img src="brand/obra-10.jpg" alt="Laura pintando ao vivo a tela dos noivos durante a celebração, sobre o cavalete" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.6s cubic-bezier(.16,1,.3,1);" style-hover="transform: scale(1.04);" />
         <figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 18px; background: linear-gradient(180deg, rgba(35,33,30,0), rgba(35,33,30,.72)); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(250,248,244,.9); font-weight: 300;">Pintura ao vivo · tela em progresso</figcaption>
       </figure>
@@ -195,7 +255,7 @@
         <img src="brand/obra-09.png" alt="Pintura ao vivo do primeiro beijo dos noivos com céu em tons de pôr do sol" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.6s cubic-bezier(.16,1,.3,1);" style-hover="transform: scale(1.04);" />
         <figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 18px; background: linear-gradient(180deg, rgba(35,33,30,0), rgba(35,33,30,.72)); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(250,248,244,.9); font-weight: 300;">Primeiro beijo · pôr do sol</figcaption>
       </figure>
-      <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative; margin-top: clamp(0px, 3vw, 54px);">
+      <figure data-reveal="" style="margin: 0; overflow: hidden; background: #F2EFE8; position: relative; margin-top: clamp(0px, 3vw, 54px);" class="la-stagger">
         <img src="brand/obra-07c.png" alt="Obra em tons de azul retratando os noivos sob o arco iluminado" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 1.6s cubic-bezier(.16,1,.3,1);" style-hover="transform: scale(1.04);" />
         <figcaption style="position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 20px 18px; background: linear-gradient(180deg, rgba(35,33,30,0), rgba(35,33,30,.72)); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(250,248,244,.9); font-weight: 300;">Recepção · tons de azul</figcaption>
       </figure>
@@ -207,13 +267,13 @@
       <p style="margin: 0 0 20px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;">Quem já viveu</p>
       <h2 style="margin: 0 auto; max-width: 20ch; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(29px, 3.8vw, 58px); line-height: 1.06;">Reações que ficaram guardadas.</h2>
     </div>
-    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(28px, 3.4vw, 56px);">
+    <div class="la-grid" style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(28px, 3.4vw, 56px);">
       <article data-reveal="" style="display: flex; flex-direction: column; gap: 24px;">
         <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 1.9vw, 25px); line-height: 1.5; font-weight: 300; color: #302c26;">“Quero exaltar a beleza dessa pintura feita ao vivo na cerimônia do nosso casamento. Foi exatamente assim… Laura, você é perfeita no que faz. Vou guardar para sempre.”</p>
         <p style="margin: 0; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #8b8577; font-weight: 400;">Marina Albernaz</p>
       </article>
       <article data-reveal="" style="display: flex; flex-direction: column; gap: 24px;">
-        <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 1.9vw, 25px); line-height: 1.5; font-weight: 300; color: #302c26;">“O trabalho do Atelier da Laura é sensacional, totalmente fora da curva. As cores, os traços, perfeito. Muito idêntico ao que eu tinha proposto — e ela ainda acrescenta coisas que melhoram o desenho. Sem palavras.”</p>
+        <p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-size: clamp(20px, 1.9vw, 25px); line-height: 1.5; font-weight: 300; color: #302c26;">“O trabalho do Atelier da Laura é sensacional, totalmente fora da curva. As cores, os traços, perfeito. Muito idêntico ao que eu tinha proposto, e ela ainda acrescenta coisas que melhoram o desenho. Sem palavras.”</p>
         <p style="margin: 0; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #8b8577; font-weight: 400;">Nathan · Savan Store</p>
       </article>
       <article data-reveal="" style="display: flex; flex-direction: column; gap: 24px;">
@@ -225,18 +285,18 @@
 
   <section id="laura" style="position: relative; padding: clamp(80px, 14vh, 180px) clamp(20px, 6vw, 88px); overflow: hidden;">
     <img src="brand/fundo-aquarela.png" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9; pointer-events: none;" />
-    <div style="position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(44px, 6vw, 100px); align-items: center;">
+    <div class="la-grid" style="position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(44px, 6vw, 100px); align-items: center;">
       <div data-reveal="" style="position: relative;">
         <img src="midia/laura-01.jpeg" alt="Laura, artista e arquiteta, com a paleta em mãos ao lado de sua obra" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #F2EFE8;" />
-        <img src="midia/laura-02.jpeg" alt="Laura pintando concentrada no atelier" loading="lazy" decoding="async" style="position: absolute; right: -5%; bottom: -10%; width: 42%; aspect-ratio: 3 / 4; object-fit: cover; border: clamp(6px, .9vw, 12px) solid #FAF8F4; display: block;" />
+        <img class="la-inset" src="midia/laura-02.jpeg" alt="Laura pintando concentrada no atelier" loading="lazy" decoding="async" style="position: absolute; right: -5%; bottom: -10%; width: 42%; aspect-ratio: 3 / 4; object-fit: cover; border: clamp(6px, .9vw, 12px) solid #FAF8F4; display: block;" />
       </div>
       <div data-reveal="">
-        <p style="margin: 0 0 24px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>Quem é Laura</p>
+        <p class="la-eyebrow" style="margin: 0 0 24px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>Quem é Laura</p>
         <h2 style="margin: 0 0 clamp(26px, 3.6vw, 42px); font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(29px, 3.6vw, 54px); line-height: 1.08; max-width: 20ch;">Arquiteta de formação. Artista por <em style="font-style: italic; color: #B08D4F;">vocação</em>.</h2>
         <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">Sou Laura. Formada em arquitetura e urbanismo e em design de jogos, premiada em concursos artísticos, e há mais de 14 anos à frente do Atelier da Laura.</p>
-        <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">A arte sempre foi minha paixão — antes mesmo de eu entender do que ela era capaz. Ao longo dos anos, impactei vidas através do meu trabalho, colhi sorrisos e reações que ficaram marcadas em mim e me incentivaram a continuar.</p>
+        <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">A arte sempre foi minha paixão, antes mesmo de eu entender do que ela era capaz. Ao longo dos anos, impactei vidas através do meu trabalho, colhi sorrisos e reações que ficaram marcadas em mim e me incentivaram a continuar.</p>
         <p style="margin: 0 0 clamp(30px, 4vw, 44px); font-size: 16px; line-height: 1.95; font-weight: 300; color: #4a463f; max-width: 44ch;">Sinto orgulho de fazer parte de um momento assim na vida de alguém. Me dedico ao máximo para que vocês sintam, na tela, o amor e o carinho que coloco em cada pincelada.</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 34px 60px; padding-top: clamp(26px, 3vw, 36px); border-top: 1px solid #E7DDCC;">
+        <div class="la-stats" style="display: flex; flex-wrap: wrap; gap: 34px 60px; padding-top: clamp(26px, 3vw, 36px); border-top: 1px solid #E7DDCC;">
           <div>
             <p style="margin: 0 0 6px; font-family: 'Italiana', serif; font-size: clamp(30px, 3vw, 42px); color: #B08D4F; line-height: 1;">14+</p>
             <p style="margin: 0; font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase; color: #8b8577; font-weight: 400;">Anos de atelier</p>
@@ -255,7 +315,7 @@
   </section>
 
   <section id="convite" style="position: relative; background: #23211E; color: #FAF8F4; padding: clamp(80px, 15vh, 190px) clamp(20px, 6vw, 88px); overflow: hidden;">
-    <img src="brand/deco-b.png" alt="" aria-hidden="true" style="position: absolute; right: -50px; top: -30px; width: min(32vw, 320px); opacity: .16; pointer-events: none;" />
+    <img class="la-deco" src="brand/deco-b.png" alt="" aria-hidden="true" style="position: absolute; right: -50px; top: -30px; width: min(32vw, 320px); opacity: .16; pointer-events: none;" />
     <div style="position: relative; max-width: 720px; margin: 0 auto; text-align: center;">
       <img src="brand/logo-grande.png" alt="" aria-hidden="true" style="width: 52px; height: 52px; object-fit: contain; margin-bottom: 28px;" />
       <h2 style="margin: 0 0 26px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 4.2vw, 66px); line-height: 1.02;">Reservo poucas datas por <em style="font-style: italic; color: #C9A76A;">ano</em>.</h2>
@@ -287,7 +347,7 @@
     <p style="max-width: 1240px; margin: clamp(36px, 5vw, 64px) auto 0; padding-top: 20px; border-top: 1px solid #E7DDCC; font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #a5a093; font-weight: 300;">Pintura ao vivo · Murais artísticos · Pinturas autorais · Arte corporativa</p>
   </footer>
 
-  <a href="https://wa.me/5561981746048" aria-label="Falar no WhatsApp" ref="{{ pillRef }}" style="transition: opacity .6s ease, transform .6s ease, background .5s ease, color .5s ease, border-color .5s ease; position: fixed; right: clamp(14px, 2.6vw, 30px); bottom: clamp(14px, 2.6vw, 30px); z-index: 40; display: flex; align-items: center; gap: 10px; background: #FAF8F4; border: 1px solid #E0D0B2; padding: 13px 22px; font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase; font-weight: 400; box-shadow: 0 22px 44px -30px rgba(35,33,30,.6);" style-hover="background: #23211E; color: #FAF8F4; border-color: #23211E;">
+  <a href="https://wa.me/5561981746048" aria-label="Falar no WhatsApp" class="la-pill" ref="{{ pillRef }}" style="transition: opacity .6s ease, transform .6s ease, background .5s ease, color .5s ease, border-color .5s ease; position: fixed; right: clamp(14px, 2.6vw, 30px); bottom: clamp(14px, 2.6vw, 30px); z-index: 40; display: flex; align-items: center; gap: 10px; background: #FAF8F4; border: 1px solid #E0D0B2; padding: 13px 22px; font-size: 9.5px; letter-spacing: .26em; text-transform: uppercase; font-weight: 400; box-shadow: 0 22px 44px -30px rgba(35,33,30,.6);" style-hover="background: #23211E; color: #FAF8F4; border-color: #23211E;">
     <span style="width: 5px; height: 5px; border-radius: 50%; background: #C9A76A;"></span>Conversar com Laura
   </a>
 
