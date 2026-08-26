@@ -22,6 +22,7 @@
 <meta name="twitter:title" content="O Atelier da Laura | Live Wedding Painting" />
 <meta name="twitter:description" content="Uma memória em forma de arte, pintada durante a sua celebração." />
 <meta name="twitter:image" content="https://atelier-da-laura.vercel.app/brand/obra-08.webp" />
+<link rel="icon" type="image/webp" href="brand/logo-grande.webp" />
 <link rel="preload" as="image" href="brand/obra-08.webp" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
@@ -45,8 +46,16 @@
   /* ================= Responsivo ================= */
   html, body { max-width: 100%; }
   body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; touch-action: manipulation; overscroll-behavior-x: none; }
-  img, video { max-width: 100%; }
+  img { max-width: 100%; height: auto; }
+  video { max-width: 100%; }
   .la-page { width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; }
+
+  .la-header { transition: background .45s ease, border-color .45s ease, padding .45s ease; border-bottom: 1px solid transparent; }
+  .la-header.solida { background: rgba(250,248,244,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom-color: #E7DDCC; }
+  .la-header.solida .la-veu { opacity: 0; }
+  .la-header.solida a, .la-header.solida span, .la-header.solida button { color: #23211E !important; }
+  .la-header.solida a[href="#convite"] { border-color: #C9A76A !important; }
+  .la-header.solida img { filter: none; }
   .la-hero-inner > div { width: 100%; }
 
   /* ---- Tablet e celular: coluna única, centralizada ---- */
@@ -71,6 +80,42 @@
     .la-stats { justify-content: center !important; text-align: center !important; gap: 26px 42px !important; }
     .la-quote { padding: 0 24px !important; align-items: center !important; text-align: center !important; }
     #topo h1 { font-size: clamp(33px, 8.6vw, 62px) !important; }
+
+    /* respiro vertical proporcional à tela: no desktop as seções usam até 180px */
+    section:not(#topo) { padding-top: clamp(58px, 9vh, 76px) !important; padding-bottom: clamp(58px, 9vh, 76px) !important; }
+    #convite { padding-top: clamp(66px, 10vh, 88px) !important; padding-bottom: clamp(66px, 10vh, 88px) !important; }
+
+    /* a obra-09 já aparece inteira na galeria: repetida aqui só alonga a página */
+    #experiencia .la-inset { display: none !important; }
+    #experiencia figcaption { margin-top: clamp(18px, 3vw, 26px) !important; }
+
+    /* o ornamento não pode competir com o texto das perguntas */
+    #perguntas .la-deco { opacity: .16 !important; }
+
+    /* rodapé centralizado, como o resto da página no celular */
+    footer > div { justify-content: center !important; text-align: center !important; }
+    footer > div > div { justify-content: center !important; }
+    footer nav { justify-content: center !important; }
+    footer > p { text-align: center !important; }
+    /* espaço para a pílula fixa do WhatsApp não cobrir o fim do rodapé */
+    footer { padding-bottom: 104px !important; }
+
+    /* piso de legibilidade: nada de rótulo com 9,5px numa tela de 6 polegadas.
+       O espaçamento entre letras cede um pouco para o texto maior continuar cabendo. */
+    [style*="font-size: 9.5px"]  { font-size: 11px !important; }
+    [style*="font-size: 10px"]   { font-size: 11px !important; }
+    [style*="font-size: 10.5px"] { font-size: 11.5px !important; }
+    [style*="letter-spacing: .46em"] { letter-spacing: .26em !important; }
+    [style*="letter-spacing: .42em"] { letter-spacing: .24em !important; }
+    [style*="letter-spacing: .38em"] { letter-spacing: .2em !important; }
+    [style*="letter-spacing: .34em"] { letter-spacing: .2em !important; }
+    [style*="letter-spacing: .3em"]  { letter-spacing: .18em !important; }
+    [style*="letter-spacing: .28em"] { letter-spacing: .18em !important; }
+    [style*="letter-spacing: .26em"] { letter-spacing: .18em !important; }
+    /* corpo de texto um pouco maior também */
+    [style*="font-size: 13.5px"] { font-size: 15px !important; }
+    [style*="font-size: 14px"]   { font-size: 15px !important; }
+    [style*="font-size: 14.5px"] { font-size: 15.5px !important; }
     .la-quote p { max-width: 100% !important; }
   }
 
@@ -90,7 +135,7 @@
 
   /* ---- Telas muito estreitas (iPhone SE / 13 mini) ---- */
   @media (max-width: 380px) {
-    .la-brand { font-size: 10px !important; letter-spacing: .16em !important; }
+    .la-brand { font-size: 11px !important; letter-spacing: .13em !important; }
     .la-header { padding: 12px 14px !important; }
     .la-hero-inner { padding: 92px 16px 88px !important; }
     #topo h1 { font-size: 30px !important; }
@@ -109,7 +154,7 @@
 <div class="la-page" style="overflow-x: hidden; background: #FAF8F4; position: relative;">
 
   <header class="la-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px clamp(18px, 4vw, 56px);">
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(35,33,30,.42), rgba(35,33,30,0)); pointer-events: none;"></div>
+    <div class="la-veu" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(35,33,30,.42), rgba(35,33,30,0)); pointer-events: none; transition: opacity .45s ease;"></div>
     <a href="#topo" aria-label="O Atelier da Laura" style="position: relative; display: flex; align-items: center; gap: 14px;">
       <img src="brand/logo-grande.webp" alt="Logotipo O Atelier da Laura" width="46" height="46" style="display: block; width: 46px; height: 46px; object-fit: contain; filter: brightness(1.25);" />
       <span class="la-brand" style="font-family: 'Italiana', 'Cormorant Garamond', serif; font-size: clamp(12px, 2.2vw, 15px); letter-spacing: .38em; text-transform: uppercase; color: #FAF8F4;">O Atelier da Laura</span>
@@ -146,7 +191,7 @@
   </sc-if>
 
   <section id="topo" style="position: relative; height: 100svh; min-height: 640px; overflow: hidden; background: #23211E;">
-    <video ref="{{ videoRef }}" autoplay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" poster="brand/obra-08.webp" aria-label="Laura pintando ao vivo durante um casamento" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(1.04) brightness(.86);">
+    <video ref="{{ videoRef }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="metadata" poster="brand/obra-08.webp" aria-label="Laura pintando ao vivo durante um casamento" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(1.04) brightness(.86);">
       <source src="midia/atelier.mp4" type="video/mp4" />
     </video>
     <div style="position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 40%, rgba(35,33,30,.12) 0%, rgba(35,33,30,.62) 78%), linear-gradient(180deg, rgba(35,33,30,.45), rgba(35,33,30,.2) 40%, rgba(35,33,30,.78));"></div>
@@ -408,10 +453,16 @@ class Component extends DCLogic {
     const v = this._video;
     if (v) {
       const key = 'atelier-laura-v2-hero-time';
-      const saved = parseFloat(localStorage.getItem(key) || '0');
-      if (saved > 0.3) { try { v.currentTime = saved; } catch (e) {} }
+      const retomar = () => {
+        const saved = parseFloat(localStorage.getItem(key) || '0');
+        if (saved > 0.3 && v.duration && saved < v.duration - 0.5) {
+          try { v.currentTime = saved; } catch (e) {}
+        }
+        const p = v.play(); if (p && p.catch) p.catch(() => {});
+      };
+      if (v.readyState >= 1) retomar();
+      else v.addEventListener('loadedmetadata', retomar, { once: true });
       this._tick = setInterval(() => { if (!v.paused) localStorage.setItem(key, String(v.currentTime)); }, 1500);
-      const p = v.play(); if (p && p.catch) p.catch(() => {});
     }
 
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
@@ -445,6 +496,11 @@ class Component extends DCLogic {
 
     this._onScroll = () => {
       this._sweep();
+      const hd = this._header || (this._header = document.querySelector('.la-header'));
+      if (hd) {
+        const passou = window.scrollY > window.innerHeight * 0.72;
+        hd.classList.toggle('solida', passou);
+      }
       const pill = this._pill;
       if (pill) {
         const past = window.scrollY > window.innerHeight * 0.8;
