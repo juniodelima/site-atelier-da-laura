@@ -451,16 +451,42 @@ class Component extends DCLogic {
     const v = this._video;
     if (v) {
       const key = 'atelier-laura-v2-hero-time';
-      const retomar = () => {
+
+      // O React grava muted só como propriedade. O iOS Safari lê o ATRIBUTO
+      // para decidir se libera autoplay, e sem ele o vídeo nunca começa no iPhone.
+      v.muted = true;
+      v.defaultMuted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+
+      const tentar = () => {
+        if (!v.paused) return;
         const saved = parseFloat(localStorage.getItem(key) || '0');
         if (saved > 0.3 && v.duration && saved < v.duration - 0.5) {
           try { v.currentTime = saved; } catch (e) {}
         }
-        const p = v.play(); if (p && p.catch) p.catch(() => {});
+        const pr = v.play();
+        if (pr && pr.catch) pr.catch(() => {});
       };
-      if (v.readyState >= 1) retomar();
-      else v.addEventListener('loadedmetadata', retomar, { once: true });
-      this._tick = setInterval(() => { if (!v.paused) localStorage.setItem(key, String(v.currentTime)); }, 1500);
+      this._tentar = tentar;
+
+      if (v.readyState >= 1) tentar();
+      v.addEventListener('loadedmetadata', tentar);
+      v.addEventListener('canplay', tentar);
+
+      // Último recurso: no primeiro toque na tela o gesto do usuário libera a
+      // reprodução, inclusive em Modo de Baixo Consumo.
+      this._gesto = () => { tentar(); };
+      document.addEventListener('touchstart', this._gesto, { once: true, passive: true });
+      document.addEventListener('click', this._gesto, { once: true });
+
+      this._vis = () => { if (!document.hidden) tentar(); };
+      document.addEventListener('visibilitychange', this._vis);
+
+      this._tick = setInterval(() => {
+        if (!v.paused) localStorage.setItem(key, String(v.currentTime));
+      }, 1500);
     }
 
     const els = Array.from(document.querySelectorAll('[data-reveal]'));
@@ -521,6 +547,11 @@ class Component extends DCLogic {
     if (this._io) this._io.disconnect();
     if (this._tick) clearInterval(this._tick);
     if (this._mq && this._mqSync) this._mq.removeEventListener('change', this._mqSync);
+    if (this._vis) document.removeEventListener('visibilitychange', this._vis);
+    if (this._video && this._tentar) {
+      this._video.removeEventListener('loadedmetadata', this._tentar);
+      this._video.removeEventListener('canplay', this._tentar);
+    }
     window.removeEventListener('scroll', this._onScroll);
     window.removeEventListener('hashchange', this._sweep);
   }
