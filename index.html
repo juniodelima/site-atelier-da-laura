@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preload" as="script" href="vendor/react.production.min.js" />
+<link rel="preload" as="script" href="vendor/react-dom.production.min.js" />
+<script>
+  window.__resources = {
+    "https://unpkg.com/react@18.3.1/umd/react.production.min.js": "vendor/react.production.min.js",
+    "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js": "vendor/react-dom.production.min.js"
+  };
+</script>
 <script src="./support.js"></script>
 <title>Pintura ao Vivo em Casamentos, Brasília | Atelier da Laura</title>
 <meta name="description" content="Pintura ao vivo para casamentos em Brasília, com a obra entregue na mesma noite. Mais de 14 anos de atelier e atendimento em todo o Brasil." />
@@ -26,7 +34,8 @@
 <link rel="preload" as="image" href="brand/obra-08.webp" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@200;300;400;500&family=Italiana&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@200;300;400;500&family=Italiana&display=swap" media="print" onload="this.media='all'; this.onload=null;" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@200;300;400;500&family=Italiana&display=swap" /></noscript>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":["LocalBusiness","ProfessionalService"],"@id":"https://atelier-da-laura.vercel.app/#negocio","name":"O Atelier da Laura","description":"Pintura ao vivo para casamentos, murais artísticos, pinturas autorais e arte corporativa. Mais de 14 anos de atelier, em Brasília, com atendimento em todo o Brasil.","url":"https://atelier-da-laura.vercel.app/","image":"https://atelier-da-laura.vercel.app/brand/obra-08.webp","logo":"https://atelier-da-laura.vercel.app/brand/logo-grande.webp","email":"oatelierdalaura@gmail.com","telephone":"+5561981746048","address":{"@type":"PostalAddress","addressLocality":"Brasília","addressRegion":"DF","addressCountry":"BR"},"areaServed":[{"@type":"City","name":"Brasília"},{"@type":"AdministrativeArea","name":"Distrito Federal"},{"@type":"Country","name":"Brasil"}],"sameAs":["https://instagram.com/oatelierdalaura"],"founder":{"@id":"https://atelier-da-laura.vercel.app/#laura"},"foundingDate":"2011","makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pintura ao vivo para casamentos (live wedding painting)","description":"Tela pintada à mão durante a cerimônia e a recepção, entregue aos noivos na mesma noite.","provider":{"@id":"https://atelier-da-laura.vercel.app/#negocio"},"areaServed":{"@type":"Country","name":"Brasil"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Murais artísticos","provider":{"@id":"https://atelier-da-laura.vercel.app/#negocio"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pinturas autorais","provider":{"@id":"https://atelier-da-laura.vercel.app/#negocio"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Arte corporativa","provider":{"@id":"https://atelier-da-laura.vercel.app/#negocio"}}}]},{"@type":"Person","@id":"https://atelier-da-laura.vercel.app/#laura","name":"Laura","jobTitle":"Artista, arquiteta e urbanista","description":"Artista à frente do Atelier da Laura há mais de 14 anos. Formada em arquitetura e urbanismo e em design de jogos, premiada em concursos artísticos.","worksFor":{"@id":"https://atelier-da-laura.vercel.app/#negocio"},"image":"https://atelier-da-laura.vercel.app/midia/laura-01.webp","sameAs":["https://instagram.com/oatelierdalaura"]},{"@type":"WebSite","@id":"https://atelier-da-laura.vercel.app/#site","url":"https://atelier-da-laura.vercel.app/","name":"O Atelier da Laura","publisher":{"@id":"https://atelier-da-laura.vercel.app/#negocio"},"inLanguage":"pt-BR"},{"@type":"FAQPage","@id":"https://atelier-da-laura.vercel.app/#perguntas","mainEntity":[{"@type":"Question","name":"O que é pintura ao vivo em casamento?","acceptedAnswer":{"@type":"Answer","text":"A pintura ao vivo é uma tela pintada à mão durante a própria celebração. No Atelier da Laura, a obra começa na cerimônia e é concluída ao longo da recepção, diante dos convidados."}},{"@type":"Question","name":"Quanto tempo leva a pintura durante a festa?","acceptedAnswer":{"@type":"Answer","text":"São cerca de 5 horas de pintura no local, da cerimônia à recepção."}},{"@type":"Question","name":"A obra é entregue no mesmo dia?","acceptedAnswer":{"@type":"Answer","text":"Sim. A tinta acrílica não tem odor forte e seca em cerca de 2 horas, então a tela é entregue em mãos aos noivos ainda na festa."}},{"@type":"Question","name":"A Laura atende casamentos fora de Brasília?","acceptedAnswer":{"@type":"Answer","text":"Sim. O atelier fica em Brasília, no Distrito Federal, e o atendimento é nacional."}},{"@type":"Question","name":"Qual é o valor da pintura ao vivo?","acceptedAnswer":{"@type":"Answer","text":"O valor depende da data, do local e do tamanho da tela. A Laura envia a proposta pelo WhatsApp, no (61) 98174-6048, depois de conversar sobre a celebração."}},{"@type":"Question","name":"Além de casamentos, o que o atelier faz?","acceptedAnswer":{"@type":"Answer","text":"O Atelier da Laura também produz murais artísticos, pinturas autorais e arte corporativa."}}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://atelier-da-laura.vercel.app/"},{"@type":"ListItem","position":2,"name":"A Experiência","item":"https://atelier-da-laura.vercel.app/#experiencia"},{"@type":"ListItem","position":3,"name":"Obras","item":"https://atelier-da-laura.vercel.app/#obras"},{"@type":"ListItem","position":4,"name":"Perguntas frequentes","item":"https://atelier-da-laura.vercel.app/#perguntas"}]}]}
 </script>
@@ -49,6 +58,12 @@
   img { max-width: 100%; height: auto; }
   video { max-width: 100%; }
   .la-page { width: 100%; max-width: 100%; margin-left: auto; margin-right: auto; }
+
+  /* Carregamento progressivo: só o topo e a seção seguinte entram no trabalho
+     inicial de renderização. As demais são montadas conforme chegam perto da
+     tela, e o navegador guarda o tamanho real depois da primeira vez. */
+  section:nth-of-type(n+3) { content-visibility: auto; contain-intrinsic-size: auto 900px; }
+  footer { content-visibility: auto; contain-intrinsic-size: auto 420px; }
 
   .la-header { transition: background .45s ease, border-color .45s ease, padding .45s ease; border-bottom: 1px solid transparent; }
   .la-header.solida { background: rgba(250,248,244,.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom-color: #E7DDCC; }
@@ -86,6 +101,9 @@
     section:not(#topo) { padding-top: clamp(58px, 9vh, 76px) !important; padding-bottom: clamp(58px, 9vh, 76px) !important; }
     #convite { padding-top: clamp(66px, 10vh, 88px) !important; padding-bottom: clamp(66px, 10vh, 88px) !important; }
 
+
+    #experiencia figure { display: flex; flex-direction: column; }
+    #experiencia figcaption { order: -1; margin: 0 0 16px !important; padding-left: 0 !important; }
 
     /* o ornamento não pode competir com o texto das perguntas */
     #perguntas .la-deco { opacity: .16 !important; }
@@ -176,9 +194,9 @@
 
   <sc-if value="{{ menuAberto }}" hint-placeholder-val="{{ false }}">
     <nav aria-label="Navegação" style="position: fixed; inset: 0; z-index: 60; background: #FAF8F4; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 0 clamp(24px, 8vw, 64px); animation: laFade .5s ease both;">
-      <img width="679" height="873" class="la-deco" src="brand/deco-c.webp" alt="" aria-hidden="true" style="position: absolute; right: -40px; bottom: -30px; width: 46vw; max-width: 320px; opacity: .5; pointer-events: none;" />
+      <img loading="lazy" decoding="async" width="679" height="873" class="la-deco" src="brand/deco-c.webp" alt="" aria-hidden="true" style="position: absolute; right: -40px; bottom: -30px; width: 46vw; max-width: 320px; opacity: .5; pointer-events: none;" />
       <button type="button" onClick="{{ toggleMenu }}" aria-label="Fechar menu" style="position: absolute; top: 24px; right: clamp(20px, 5vw, 56px); background: transparent; border: 0; color: #23211E; font-family: 'Manrope', sans-serif; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; font-weight: 300; cursor: pointer;">Fechar</button>
-      <img width="660" height="660" src="brand/logo-grande.webp" alt="" aria-hidden="true" style="width: 54px; height: 54px; object-fit: contain; margin-bottom: 26px;" />
+      <img loading="lazy" decoding="async" width="660" height="660" src="brand/logo-grande.webp" alt="" aria-hidden="true" style="width: 54px; height: 54px; object-fit: contain; margin-bottom: 26px;" />
       <a href="#experiencia" onClick="{{ toggleMenu }}" style="position: relative; padding: 13px 0; border-bottom: 1px solid #EDE3D4; font-family: 'Cormorant Garamond', serif; font-size: 29px; font-weight: 300;">A Experiência</a>
       <a href="#processo" onClick="{{ toggleMenu }}" style="position: relative; padding: 13px 0; border-bottom: 1px solid #EDE3D4; font-family: 'Cormorant Garamond', serif; font-size: 29px; font-weight: 300;">Processo</a>
       <a href="#obras" onClick="{{ toggleMenu }}" style="position: relative; padding: 13px 0; border-bottom: 1px solid #EDE3D4; font-family: 'Cormorant Garamond', serif; font-size: 29px; font-weight: 300;">Obras</a>
@@ -214,8 +232,8 @@
   </section>
 
   <section id="experiencia" style="position: relative; padding: clamp(80px, 14vh, 180px) clamp(20px, 6vw, 88px) clamp(70px, 12vh, 150px); overflow: hidden;">
-    <img width="1920" height="1280" src="brand/fundo-aquarela.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .8; pointer-events: none;" />
-    <img width="726" height="776" class="la-deco" src="brand/deco-a.webp" alt="" aria-hidden="true" style="position: absolute; top: -6%; right: -8%; width: min(46vw, 520px); opacity: .55; pointer-events: none; animation: laFloat 16s ease-in-out infinite;" />
+    <img loading="lazy" decoding="async" width="1920" height="1280" src="brand/fundo-aquarela.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .8; pointer-events: none;" />
+    <img loading="lazy" decoding="async" width="726" height="776" class="la-deco" src="brand/deco-a.webp" alt="" aria-hidden="true" style="position: absolute; top: -6%; right: -8%; width: min(46vw, 520px); opacity: .55; pointer-events: none; animation: laFloat 16s ease-in-out infinite;" />
     <div class="la-grid" style="position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr)); gap: clamp(44px, 6vw, 104px); align-items: center;">
       <div data-reveal="">
         <p class="la-eyebrow" style="margin: 0 0 24px; display: flex; align-items: center; gap: 14px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;"><span style="display: block; width: 34px; height: 1px; background: #C9A76A;"></span>A obra</p>
@@ -235,7 +253,7 @@
   </section>
 
   <section id="processo" style="position: relative; background: #23211E; color: #FAF8F4; padding: clamp(80px, 14vh, 180px) clamp(20px, 6vw, 88px); overflow: hidden;">
-    <img width="437" height="710" class="la-deco" src="brand/deco-b.webp" alt="" aria-hidden="true" style="position: absolute; left: -60px; bottom: -40px; width: min(38vw, 380px); opacity: .18; pointer-events: none;" />
+    <img loading="lazy" decoding="async" width="437" height="710" class="la-deco" src="brand/deco-b.webp" alt="" aria-hidden="true" style="position: absolute; left: -60px; bottom: -40px; width: min(38vw, 380px); opacity: .18; pointer-events: none;" />
     <div style="position: relative; max-width: 1240px; margin: 0 auto;">
       <div data-reveal="" class="la-head" style="display: flex; flex-wrap: wrap; gap: 22px 60px; align-items: flex-end; justify-content: space-between; margin-bottom: clamp(50px, 7vw, 96px);">
         <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 4vw, 62px); line-height: 1.04; max-width: 20ch;">Quatro momentos entre o convite e a <em style="font-style: italic; color: #C9A76A;">obra</em>.</h2>
@@ -270,7 +288,7 @@
     <img width="546" height="820" src="brand/foto-laura-prop.webp" alt="Laura pintando ao vivo durante uma cerimônia de casamento" loading="lazy" decoding="async" ref="{{ parallaxRef }}" style="position: absolute; inset: 0; width: 100%; height: 116%; object-fit: cover; object-position: 50% 42%; opacity: .9;" />
     <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(35,33,30,.78) 0%, rgba(35,33,30,.3) 55%, rgba(35,33,30,.55) 100%);"></div>
     <blockquote class="la-quote" style="position: absolute; inset: 0; margin: 0; display: flex; flex-direction: column; justify-content: center; gap: 26px; padding: 0 clamp(24px, 8vw, 120px);">
-      <img width="660" height="660" src="brand/logo-grande.webp" alt="" aria-hidden="true" style="width: 58px; height: 58px; object-fit: contain;" />
+      <img loading="lazy" decoding="async" width="660" height="660" src="brand/logo-grande.webp" alt="" aria-hidden="true" style="width: 58px; height: 58px; object-fit: contain;" />
       <p style="margin: 0; max-width: 22ch; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(27px, 3.6vw, 58px); line-height: 1.18; color: #FAF8F4;">Um casamento acontece em um único dia. A obra permanece por <em style="font-style: italic; color: #E4CFA6;">gerações</em>.</p>
     </blockquote>
   </section>
@@ -333,7 +351,7 @@
   </section>
 
   <section id="laura" style="position: relative; padding: clamp(80px, 14vh, 180px) clamp(20px, 6vw, 88px); overflow: hidden;">
-    <img width="1920" height="1280" src="brand/fundo-aquarela.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9; pointer-events: none;" />
+    <img loading="lazy" decoding="async" width="1920" height="1280" src="brand/fundo-aquarela.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .9; pointer-events: none;" />
     <div class="la-grid" style="position: relative; max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(44px, 6vw, 100px); align-items: center;">
       <div data-reveal="" style="position: relative;">
         <img width="853" height="1280" src="midia/laura-01.webp" alt="Laura, artista e arquiteta, com a paleta em mãos ao lado de sua obra" loading="lazy" decoding="async" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #F2EFE8;" />
@@ -364,7 +382,7 @@
   </section>
 
   <section id="perguntas" style="position: relative; padding: clamp(80px, 13vh, 170px) clamp(20px, 6vw, 88px); background: #F4EFE7; overflow: hidden;">
-    <img class="la-deco" src="brand/deco-c.webp" width="679" height="873" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: -30px; width: min(30vw, 260px); opacity: .5; pointer-events: none; animation: laFloat 19s ease-in-out infinite;" />
+    <img loading="lazy" decoding="async" class="la-deco" src="brand/deco-c.webp" width="679" height="873" alt="" aria-hidden="true" style="position: absolute; right: -40px; top: -30px; width: min(30vw, 260px); opacity: .5; pointer-events: none; animation: laFloat 19s ease-in-out infinite;" />
     <div style="position: relative; max-width: 1120px; margin: 0 auto;">
       <div data-reveal="" style="text-align: center; margin-bottom: clamp(44px, 6vw, 76px);">
         <p style="margin: 0 0 20px; font-size: 9.5px; letter-spacing: .42em; text-transform: uppercase; color: #B08D4F; font-weight: 400;">Perguntas frequentes</p>
@@ -400,9 +418,9 @@
   </section>
 
   <section id="convite" style="position: relative; background: #23211E; color: #FAF8F4; padding: clamp(80px, 15vh, 190px) clamp(20px, 6vw, 88px); overflow: hidden;">
-    <img width="437" height="710" class="la-deco" src="brand/deco-b.webp" alt="" aria-hidden="true" style="position: absolute; right: -50px; top: -30px; width: min(32vw, 320px); opacity: .16; pointer-events: none;" />
+    <img loading="lazy" decoding="async" width="437" height="710" class="la-deco" src="brand/deco-b.webp" alt="" aria-hidden="true" style="position: absolute; right: -50px; top: -30px; width: min(32vw, 320px); opacity: .16; pointer-events: none;" />
     <div style="position: relative; max-width: 720px; margin: 0 auto; text-align: center;">
-      <img width="660" height="660" src="brand/logo-grande.webp" alt="" aria-hidden="true" style="width: 52px; height: 52px; object-fit: contain; margin-bottom: 28px;" />
+      <img loading="lazy" decoding="async" width="660" height="660" src="brand/logo-grande.webp" alt="" aria-hidden="true" style="width: 52px; height: 52px; object-fit: contain; margin-bottom: 28px;" />
       <h2 style="margin: 0 0 26px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(30px, 4.2vw, 66px); line-height: 1.02;">Reservo poucas datas por <em style="font-style: italic; color: #C9A76A;">ano</em>.</h2>
       <p style="margin: 0 auto clamp(38px, 5vw, 52px); font-size: 15.5px; line-height: 1.95; font-weight: 200; color: rgba(250,248,244,.86); max-width: 44ch;">Conte-me sobre a celebração. Respondo pessoalmente, com uma proposta pensada para a sua data, o seu espaço e a obra que ficará com vocês.</p>
       <a href="https://wa.me/5561981746048?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20tenho%20interesse%20na%20pintura%20ao%20vivo%20para%20o%20meu%20casamento." target="_blank" rel="noopener" style="display: inline-block; padding: 18px 44px; background: linear-gradient(120deg, #C9A76A, #A88243 60%, #D8BC8A); color: #23211E; font-size: 10.5px; letter-spacing: .28em; text-transform: uppercase; font-weight: 500;" style-hover="filter: brightness(1.08);">Falar com a Laura no WhatsApp</a>
@@ -417,7 +435,7 @@
   <footer style="background: #FAF8F4; padding: clamp(52px, 8vh, 92px) clamp(20px, 6vw, 88px) 40px;">
     <div style="max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 30px 60px; justify-content: space-between; align-items: flex-end;">
       <div style="display: flex; align-items: center; gap: 18px;">
-        <img src="brand/logo-grande.webp" alt="Logotipo O Atelier da Laura" width="52" height="52" style="display: block; width: 52px; height: 52px; object-fit: contain;" />
+        <img loading="lazy" decoding="async" src="brand/logo-grande.webp" alt="Logotipo O Atelier da Laura" width="52" height="52" style="display: block; width: 52px; height: 52px; object-fit: contain;" />
         <div>
           <p style="margin: 0 0 10px; font-family: 'Italiana', serif; font-size: 16px; letter-spacing: .34em; text-transform: uppercase;">O Atelier da Laura</p>
           <p style="margin: 0; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #6b6558; font-weight: 300;">Brasília, DF · atendimento nacional</p>
@@ -459,6 +477,7 @@ class Component extends DCLogic {
       v.setAttribute('muted', '');
       v.setAttribute('playsinline', '');
       v.setAttribute('webkit-playsinline', '');
+      v.setAttribute('autoplay', '');
 
       const tentar = () => {
         if (!v.paused) return;
